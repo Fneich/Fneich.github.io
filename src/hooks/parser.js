@@ -44,9 +44,11 @@ export const useParser = () => {
      */
     const parseSectionArticles = (section) => {
         const articles = section.data?.articles || []
-        return articles.map((article, key) => {
-            return new ArticleDataWrapper(section, article, language, theme, key + 1)
-        })
+        return articles
+            .filter(article => article.enabled !== false)
+            .map((article, key) => {
+                return new ArticleDataWrapper(section, article, language, theme, key + 1)
+            })
     }
 
     return {
