@@ -22,6 +22,7 @@ export default class ArticleItemDataWrapper {
         this.id = id
         this.categoryId = rawData.categoryId
         this.category = undefined
+        this.type = rawData.type
 
         const date = this._parseDate(rawData.date)
         const dateStart = this._parseDate(rawData.dateStart) || date
@@ -122,6 +123,8 @@ export default class ArticleItemDataWrapper {
             province: language.getTranslation(locales, "province", null),
             tags: language.getTranslation(locales, "tags", []),
             text: language.getTranslation(locales, "text", null),
+            textFull: language.getTranslation(locales, "textFull", null),
+            myContribution: language.getTranslation(locales, "myContribution", null),
             label: language.getTranslation(locales, "label", null),
         }
 

@@ -71,7 +71,7 @@ function DataProvider({ children, settings }) {
         const jSections = await utils.file.loadJSON("/data/sections.json")
 
         const categories = jCategories.categories
-        const sections = jSections.sections
+        const sections = jSections.sections.filter(section => section.enabled !== false)
         _bindCategoriesAndSections(categories, sections)
         await _loadSectionsData(sections)
 

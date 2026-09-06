@@ -10,7 +10,7 @@ function Tags({ children, className = "" }) {
     )
 }
 
-function Tag({ text, variant = "tag-default", className = "" }) {
+function Tag({ text, variant = "tag-default", className = "", onClick = null }) {
     const theme = useTheme()
     const [transitionClass, setTransitionClass] = useState(``)
 
@@ -21,8 +21,11 @@ function Tag({ text, variant = "tag-default", className = "" }) {
         }, 1000/30)
     }, [theme.getSelectedTheme()])
 
+    const clickableClass = onClick ? `tag-clickable` : ``
+
     return (
-        <li className={`tag ${className} ${variant} ${transitionClass}`}
+        <li className={`tag ${className} ${variant} ${clickableClass} ${transitionClass}`}
+            onClick={onClick}
             dangerouslySetInnerHTML={{__html: text}}/>
     )
 }

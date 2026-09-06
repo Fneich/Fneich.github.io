@@ -14,9 +14,9 @@
             "id": 1,
             "component": "ArticleContactForm",
             "settings": {
-                "email_js_public_key": "tzObcsmOwHvPy6Rhp",
-                "email_js_service_id": "service_4h8g7vb",
-                "email_js_template_id": "template_react"
+                "email_js_public_key": "VQobCPsYcd9fYf-FW",
+                "email_js_service_id": "service_i574x16",
+                "email_js_template_id": "template_6796a3f"
             },
             "locales": {
                 "en": {

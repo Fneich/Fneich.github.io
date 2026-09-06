@@ -48,3 +48,7 @@ li.tag-dark {
 li.tag-no-transition {
     transition: none!important;
 }
+
+li.tag-clickable {
+    cursor: pointer;
+}
